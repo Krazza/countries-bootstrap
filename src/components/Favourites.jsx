@@ -12,7 +12,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
 import { InitializeCountries, isLoading } from "../features/countriesSlice.js";
 import Spinner from 'react-bootstrap/Spinner';
-import "../styles/Home.css"
 
 const Countries = () => {
   const dispatch = useDispatch();
@@ -46,7 +45,7 @@ const Countries = () => {
         </Col>
       </Row>
       <Row xs={2} md={3} lg={4} className=" g-3">
-        { loading && <Spinner animation="border" className='centerSpinner'/> }
+        { loading && <Spinner animation="border" /> }
         {countriesList.filter((country => { return country.name.official.toLowerCase().includes(search.toLowerCase())}))
         .map((country) => (<Col key={country.name.common} className="mt-5">
               <LinkContainer
