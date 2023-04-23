@@ -10,7 +10,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
 import { useDispatch, useSelector } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
-import { InitializeCountries, isLoading } from "../features/countriesSlice.js";
+import { InitializeCountries } from "../features/countriesSlice.js";
 import Spinner from 'react-bootstrap/Spinner';
 import "../styles/Home.css"
 
@@ -45,7 +45,7 @@ const Countries = () => {
           </Form>
         </Col>
       </Row>
-      <Row xs={2} md={3} lg={4} className=" g-3">
+      <Row xs={2} md={3} lg={4} className=" g-3 countryList">
         { loading && <Spinner animation="border" className='centerSpinner'/> }
         {countriesList.filter((country => { return country.name.official.toLowerCase().includes(search.toLowerCase())}))
         .map((country) => (<Col key={country.name.common} className="mt-5">
@@ -53,7 +53,7 @@ const Countries = () => {
                 to={`/countries/${country.name.common}`}
                 state={{ country: country }}
               >
-                <Card className="h-100">
+                <Card className="h-100 country">
                   <Card.Body className="d-flex flex-column">
                   <Card.Img variant="top" src={country.flags.png} />
                     <Card.Title>{country.name.common}</Card.Title>

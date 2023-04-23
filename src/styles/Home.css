@@ -1,7 +1,48 @@
+header{
+    height: 8vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 5vh;
+    padding-right: 5vh;
+    background-color: #D98734;
+    color: #1C1B28;
+    font-weight: 600;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    width: 10vw;
+}
+
+.myButtonClass{
+    background-color: #F5F0F2;
+    color: #1C1B28;
+    border-color: #853018;
+    border-width: 2px;
+    font-weight: 600;
+}
+
+.myButtonClass:hover{
+    background-color: #40383A;
+    border-color: #F5F0F2;
+    color: #F5F0F2;
+}
+
 .welcomePageContainer{
-    height: 90vh;
+    height: 92vh;
     display: flex;
     flex-direction: column;
+    background-image: linear-gradient(#0000004a, #0000004a), url("/src/assets/images/bckgr01.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:#F5F0F2;
 }
 
 .welcomePage{
@@ -14,7 +55,64 @@
     text-align: center;
 }
 
+.welcomePage h1{
+    font-size: 4rem;
+}
+
+.welcomePage h2{
+    font-size: 2rem;
+}
+
+.welcomePage p, a{
+    font-size: 1.5rem;
+}
+
 .centerSpinner{
     display: flex;
     margin: 10% auto 0 auto;
+}
+
+.countrySingleContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+}
+
+.countrySingleSideMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 40vh;
+}
+
+.countrySingleInner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countrySingleInner img{
+    height: 120px;
+    width: 120px;
+}
+
+.countrySinglePicture{
+    width: auto;
+    height: 60vh;
+    border-radius: 22px;
+}
+
+.country{
+    background-color: #F5F0F2;
+}
+
+.countryList{
+    padding: 0 4vw 0 4vw;
+}
+
+.mainContainer{
+    min-height: 92vh;
+    height: fit-content;
 }

@@ -9,7 +9,8 @@ const Home = () => {
         <p>{"is a simple React application made in Business College Helsinki lessons."}</p>
         <section>
           <h2>{"App uses"}</h2>
-          <a href="https://restcountries.com/">https://restcountries.com/ </a> and{' '}
+          <a href="https://restcountries.com/">https://restcountries.com/ </a> 
+          <br/>
           <a href="https://openweathermap.org/">https://openweathermap.org/</a>
         </section>
       </div>

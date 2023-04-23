@@ -24,7 +24,7 @@ function Login()
         <div className="welcomePage">
         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"/>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"/>
-        <Button onClick={() => LogInEmailPassword(email, password)}>{"Login"}</Button>
+        <Button className="myButtonClass" onClick={() => LogInEmailPassword(email, password)}>{"Login"}</Button>
         <div>
             {"Don't have an account?"}
             <Link to="/register">{" Register"}</Link>
